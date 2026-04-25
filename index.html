@@ -593,36 +593,41 @@
       <div class="card-3d">
         <div class="card-face card-visual">
           <div class="flip-hint">Hover ↻</div>
-          <div class="cloth-visual">
-            <svg width="200" height="340" viewBox="0 0 200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="#e8d5a3" stop-opacity="0.1"/>
-                </linearGradient>
-                <linearGradient id="g1b" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#2a2a35"/>
-                  <stop offset="100%" stop-color="#0e0e14"/>
-                </linearGradient>
-              </defs>
-              <!-- Jacket silhouette -->
-              <path d="M40 80 L20 160 L30 320 L170 320 L180 160 L160 80 L130 60 L100 70 L70 60 Z" fill="url(#g1b)" stroke="rgba(201,169,110,0.3)" stroke-width="1"/>
-              <!-- Lapels -->
-              <path d="M70 60 L100 70 L100 130 L60 90 Z" fill="rgba(201,169,110,0.08)" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
-              <path d="M130 60 L100 70 L100 130 L140 90 Z" fill="rgba(201,169,110,0.08)" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
-              <!-- Shoulder lines -->
-              <line x1="40" y1="80" x2="20" y2="140" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
-              <line x1="160" y1="80" x2="180" y2="140" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
-              <!-- Button line -->
-              <line x1="100" y1="130" x2="100" y2="310" stroke="rgba(201,169,110,0.15)" stroke-width="0.5" stroke-dasharray="4 4"/>
-              <circle cx="100" cy="160" r="3" fill="rgba(201,169,110,0.4)"/>
-              <circle cx="100" cy="200" r="3" fill="rgba(201,169,110,0.4)"/>
-              <circle cx="100" cy="240" r="3" fill="rgba(201,169,110,0.4)"/>
-              <!-- Geometric accent -->
-              <polygon points="100,20 115,50 85,50" fill="none" stroke="rgba(201,169,110,0.4)" stroke-width="0.5"/>
-              <circle cx="100" cy="20" r="2" fill="var(--gold)" opacity="0.6"/>
-            </svg>
-          </div>
+<div class="cloth-visual">
+  <svg width="200" height="340" viewBox="0 0 200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#e8d5a3" stop-opacity="0.1"/>
+      </linearGradient>
+      <clipPath id="jacketClip">
+        <rect x="0" y="0" width="240" height="340" rx="4"/>
+      </clipPath>
+    </defs>
+
+    <!-- Jacket image — fills the full SVG canvas, cropped to fit -->
+    <image
+      href="jacket.png"
+      x="0" y="0"
+      width="240" height="340"
+      preserveAspectRatio="xMidYMid slice"
+      clip-path="url(#jacketClip)"
+      style="opacity: 0.92;"
+    />
+
+    <!-- Overlay decorative SVG elements on top of the image -->
+    <path d="M70 60 L100 70 L100 130 L60 90 Z" fill="rgba(201,169,110,0.08)" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
+    <path d="M130 60 L100 70 L100 130 L140 90 Z" fill="rgba(201,169,110,0.08)" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
+    <line x1="40" y1="80" x2="20" y2="140" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
+    <line x1="160" y1="80" x2="180" y2="140" stroke="rgba(201,169,110,0.2)" stroke-width="0.5"/>
+    <line x1="100" y1="130" x2="100" y2="310" stroke="rgba(201,169,110,0.15)" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <circle cx="100" cy="160" r="3" fill="rgba(201,169,110,0.4)"/>
+    <circle cx="100" cy="200" r="3" fill="rgba(201,169,110,0.4)"/>
+    <circle cx="100" cy="240" r="3" fill="rgba(201,169,110,0.4)"/>
+    <polygon points="100,20 115,50 85,50" fill="none" stroke="rgba(201,169,110,0.4)" stroke-width="0.5"/>
+    <circle cx="100" cy="20" r="2" fill="#c9a96e" opacity="0.6"/>
+  </svg>
+</div>
           <div>
             <div class="card-tag">01 — Outerwear</div>
             <div class="card-name">ECLIPSE COAT</div>
